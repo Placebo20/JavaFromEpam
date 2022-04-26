@@ -1,4 +1,4 @@
-package part_four;
+package part_four.variant1_1;
 
 public class Word {
 	private String word;
