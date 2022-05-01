@@ -2,8 +2,10 @@ package part_four.variant2_1.entity;
 
 public class Flower {
 	
+	final public String[] freshnessDegree = new String[] {"Very fresh", "Fresh", "Middle fresh", "Not fresh", "Rotting"};
+	
 	private String title;
-	private FreshnessDegree freshness;
+	private String freshness;
 	private int price;
 	private int stemLength;
 
@@ -14,18 +16,25 @@ public class Flower {
 		stemLength = 0;
 	}
 	
-	public Flower(String title, FreshnessDegree freshness, int price, int stemLength) {
+	public Flower(String title, int freshnessNum, int price, int stemLength) {
 		this.title = title;
-		this.freshness = freshness;
+		this.freshness = freshnessDegree[freshnessNum];
 		this.price = price;
 		this.stemLength = stemLength;
+	}
+	
+	public void setFlower(Flower newFlower) {
+		title = newFlower.title;
+		freshness = newFlower.freshness;
+		price = newFlower.price;
+		stemLength = newFlower.stemLength;
 	}
 	
 	public void setTitle(String newTitle) {
 		title = newTitle;
 	}
-	public void setFreshness(FreshnessDegree newFreshness) {
-		freshness = newFreshness;
+	public void setFreshness(int freshnessNum) {
+		freshness = freshnessDegree[freshnessNum];
 	}
 	public void setPrice(int newPrice) {
 		price = newPrice;
@@ -35,9 +44,10 @@ public class Flower {
 	}
 	
 	public String getTitle() {return title;}
-	public FreshnessDegree getFreshness() {return freshness;}
+	public String getFreshness() {return freshness;}
 	public int getPrice() {return price;}
 	public int getStemLength() {return stemLength;}
+	
 	
 	@Override
 	public String toString() {

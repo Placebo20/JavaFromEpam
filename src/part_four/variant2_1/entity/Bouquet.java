@@ -21,9 +21,11 @@ public class Bouquet{
 	
 	public void addFlower(Flower newFlower) {
 		bouquet.add(newFlower);
+		priceOfBouquet += newFlower.getPrice();
 	}
-	public void addFlower(String title, FreshnessDegree freshness, int price, int stemLength) {
-		bouquet.add(new Flower(title, freshness, price, stemLength));
+	public void addFlower(String title, int freshnessNum, int price, int stemLength) {
+		bouquet.add(new Flower(title, freshnessNum, price, stemLength));
+		priceOfBouquet += price;
 	}
 	
 	public void setBouquet(Vector<Flower> bouquet) {
