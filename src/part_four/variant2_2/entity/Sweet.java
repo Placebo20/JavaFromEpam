@@ -1,10 +1,10 @@
 package part_four.variant2_2.entity;
 
 public class Sweet {
-	private String title;
-	private String manufacturer;
-	private int weight;
-	private int sugarCount;
+	protected String title;
+	protected String manufacturer;
+	protected int weight;
+	protected int sugarCount;
 	
 	public Sweet(String title, String manufacturer, int weight, int sugarCount) {
 		this.title = title;
