@@ -1,4 +1,4 @@
-package part_four.variant2_2.entity;
+package part_four.variant2_2.entity.enums;
 
 public enum ChocolateType {
 	MILK,
