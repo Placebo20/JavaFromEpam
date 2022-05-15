@@ -93,4 +93,16 @@ public class ChocolateBar extends Sweet {
 		return true;
 	}
 	
+	@Override
+	public int hashCode() {
+		int asciiSum = super.hashCode();
+		String wordsSum = type.name() + filler.name();
+		if(porous == true) asciiSum++;
+		for(int i = 0; i < wordsSum.length(); i++) {
+			asciiSum += (int) wordsSum.charAt(i);
+		}
+		asciiSum += cocoaCount;
+		return asciiSum;
+	}
+	
 }
